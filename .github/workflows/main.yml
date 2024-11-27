@@ -1,0 +1,14 @@
+name: Run Every Minute
+
+on:
+  schedule:
+    - cron: '* * * * *'  # Ejecuta cada minuto
+
+jobs:
+  example_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Run a script
+        run: echo "This job runs every minute!"
